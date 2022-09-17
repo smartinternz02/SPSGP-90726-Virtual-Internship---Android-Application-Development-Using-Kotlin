@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--The UI for the dialog box to add new groceries in the app-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+    <!--The elements in the dialog box are arranged in Relative layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF03DAC5"
+        >
+        <!--Heading of the dialog box-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add grocery"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="4dp"
+            android:layout_margin="4dp"
+            android:id="@+id/adddialogbox"/>
+    </RelativeLayout>
+    <!--The columns in the dialog box asking for inputs from the user in order to add new groceries-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="45dp"
+        android:layout_below="@id/adddialogbox"
+        android:background="#FFFFFFFF"
+        >
+        <!--Name of the grocery added-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputEditTextTheme"
+            android:layout_margin="5dp"
+            android:hint="Grocery is..."
+            android:padding="5dp"
+            android:textColorHint="@color/black"
+            >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputEditTextTheme"
+
+            android:hint="Grocery is..."
+            android:inputType="text"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textColorHint="@color/black"
+            android:id="@+id/Edittextfield"/>
+
+
+       <!--Quantity of the grocery added-->
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputEditTextTheme"
+            android:layout_margin="5dp"
+            android:hint="Number of Groceries is..."
+            android:padding="5dp"
+            android:textColorHint="@color/black"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextInputEditTextTheme"
+                android:layout_margin="5dp"
+                android:hint="Number of Groceries is..."
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textColorHint="@color/black"
+
+                android:id="@+id/Edittextfieldn"/>
+
+
+        <!--Rate of the grocery added-->
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputEditTextTheme"
+            android:layout_margin="5dp"
+            android:hint="The price is"
+            android:padding="5dp"
+            android:textColorHint="@color/black"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextInputEditTextTheme"
+                android:layout_margin="5dp"
+                android:hint="The Price is"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textColorHint="@color/black"
+
+                android:id="@+id/Edittextfieldp"/>
+
+
+        <!--Buttons on the dialog box-->
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="2"
+            >
+            <!--Button to Cancel the adding grocery operation-->
+            <Button
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/buttomback"
+                android:id="@+id/cancelbutton"
+                android:text="Cancel"
+                android:textAllCaps="false"/>
+
+            <!--Button to add new grocery-->
+            <Button
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/buttomback"
+                android:id="@+id/add"
+                android:text="Add"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

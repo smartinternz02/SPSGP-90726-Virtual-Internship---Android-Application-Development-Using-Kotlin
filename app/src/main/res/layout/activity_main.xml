@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Using Relative Layout for the main window of the app-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <!--The headng of the app showing Android Grocery, the name of the application-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Android Grocery"
+        android:textSize="40dp"
+        android:gravity="center_horizontal"
+        android:background="#FF3700B3"
+        android:textColor="@color/white"
+        android:id="@+id/tv"
+        />
+    <!--The layout showing the list of groceries added by the user-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recview"
+        tools:listitem="@layout/groceryrecycler"
+        android:layout_below="@id/tv"
+        />
+
+    <!--The add button to add new groceries-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addb"
+        android:layout_width="wrap_content"
+        android:layout_alignEnd="@id/recview"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="211dp"
+        android:layout_marginBottom="33dp"
+        android:src="@drawable/ic_baseline_add_24"
+        android:tint="#FF3700B3"
+        app:backgroundTint="@color/white"
+        android:layout_alignRight="@id/recview" />
+</RelativeLayout>
